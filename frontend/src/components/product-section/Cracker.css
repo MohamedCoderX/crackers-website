@@ -1,0 +1,24 @@
+.search-bar{
+display: flex;
+align-items: flex-start;
+justify-content: center;
+    width: 40%;
+    padding: 4px 3px;
+    margin: 10px auto;
+}
+.search-bar i{
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 8px 8px;
+    border-radius: 3px;
+}
+.search-bar input{
+    padding:4px 3px;
+    width: 100%;
+}
+.cracker-display{
+    padding-bottom: 20px;
+
+}

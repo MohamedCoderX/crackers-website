@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+.navbar{
+    padding: 20px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    margin: auto;
+}
+.navbar .Logo{
+    width: 247px;
+}
+.navbar-menu{
+    display: flex;
+    list-style: none;
+    gap: 30px;
+cursor: pointer;
+    font-size: 18px;
+    margin: 0;
+}
+.navbar-right{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.navbar-right input{
+    padding: 4px 30px;
+
+}
+li{
+    list-style: none;
+}
+button{
+    background-color: #fed703;
+    color: black;
+    font-size: 16px;
+    padding: 5px 30px;
+    outline: none;
+    border: transparent ;
+    border-radius: 3px;
+ 
+    transition: 0.3s ease-in-out;
+}
+button:hover{
+    background-color: black;
+    color: white;
+}
+.Load{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbar ul li:hover{
+text-decoration: underline;
+}
+h2{
+    color: black;
+    font-weight: 700;
+    text-decoration: 2px solid #6A0DAD underline;
+}
+.bar{
+    font-size: 30px;
+    cursor: pointer;
+}
+.imgnav{
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    
+    justify-content: space-between;
+}
+#lisiis{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+@media(max-width:480px){
+    .navbar-menu ,.navbar-right{
+        display: flex;
+        flex-direction: column;
+      align-items: start;
+      margin-top: 20px;
+      margin-bottom: 30px;
+    } 
+    #lisiis{
+        display: none;
+    }
+    #lisiis.open{
+        display: block;
+    }
+    .navbar ul.open{
+       display: flex;
+    }
+    .navbar{
+        flex-direction: column;
+    }
+    
+    .imgnav{
+        width: 100%;
+        
+    }
+    .navbar .Logo{
+        width: 150px;
+    }
+}

@@ -1,0 +1,100 @@
+.logoss{
+    max-width: 27%;
+}
+.logosimg{
+    width: 40%;
+}
+.logosimg  img{
+    width: 100%;
+}
+.menu{
+    display: flex;
+    cursor: pointer;
+    padding-top: 10px;
+    align-items: center;
+    gap: 10px;
+}
+.abtcom{
+    max-width: 28%;
+}
+.logo h2{
+    padding: 30px 0px 15px 0px;
+    color: white;
+    letter-spacing: 1px;
+}
+.logo h3{
+    color: rgb(48, 47, 47);
+    padding-bottom: 20px;
+}
+.contact_s1{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    
+    font-size: 20px;
+}
+.contact a{
+color: black;
+}
+.abtcom h2{
+    color: black;
+    text-decoration: none;
+}
+.contact h2{
+    text-decoration: none;
+}
+.footer-full{
+    padding: 20px;
+    background-image: url(../../../public/images/footer2.jpg);
+    background-position: center;
+    flex-wrap: wrap;
+}
+.about p{
+    padding-top: 10px;
+    color: rgb(101, 97, 97);
+    letter-spacing: 1px;
+    font-size: 18px;
+}
+.about_icon{
+    margin-top: 20px;
+}
+
+.about_icon a{
+     gap: 10px;
+    color:black;
+    font-size: 25px;
+}
+.her{
+    color: red;
+}
+.copyright{
+    background-color: rgb(20, 19, 19);
+    padding: 13px 0px;
+    color: rgb(206, 203, 203);
+    text-align: center;
+}
+.footer-full{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+.menu li:hover{
+    text-decoration: underline;
+}
+@media(max-width:480px){
+    .logoss{
+        max-width: 100%;
+    }
+    .menu{
+        flex-wrap: wrap;
+    }
+    h3{
+        font-size: 20px;
+    }
+    .contact_s1{
+        flex-wrap: nowrap;
+    }
+    .abtcom{
+        max-width: 100%;
+    }
+}

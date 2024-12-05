@@ -1,0 +1,133 @@
+.about-head img{
+    width: 100%;
+    aspect-ratio: 3/1;
+    animation: leFadeIn 1s ease-in-out;
+}
+.about-header{
+    display: flex
+;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+@keyframes fadeinLeftt{
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to { opacity: 1 }
+}
+.header-image img{
+    width: 100%;
+    margin: 50px;
+    animation: fadeinLeftt 1.7s ease-in-out;
+}
+@keyframes faderight{
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to { opacity: 1 }
+}
+.header-image{
+    width: 40%;
+}
+.header-contentimg {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 10px;
+    justify-content: flex-start;
+    margin-top: 20px;
+}
+@keyframes leFadeIn {
+    from { opacity: 0 }
+    to { opacity: 1 }
+}
+.header-content-about{
+    width: 50%;
+    animation: faderight 1.9s ease-in-out;
+}
+.header-contentimg  img{
+    width: 40%;
+    
+}
+
+.header-content-about h1{
+    color: black;
+    font-size: 48px;
+}
+/*
+.brand{
+    background-image: url('c2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}*/
+.header-content-about h2{
+    color: black;
+    font-size: 32px;
+}
+.header-content-about P{
+    color: rgb(67, 66, 66);
+   text-align: justify;
+    font-size: 20px;
+}
+.brand h1{
+    text-align: center;
+    font-size: 45px;
+    color: black;
+}
+.brand-image img{
+    width: 300px;
+    height: 100px;
+}
+.brand-image{
+    display: flex;
+align-items: center;    
+     justify-content: center;
+     margin: 50px 0px 0px 0px;
+     gap: 30px;
+}
+.footeras h1{
+text-align: center;
+color: black;
+font-size: 45px;
+margin: 100px 0px 20px 0px;
+}
+.footeras p{
+text-align: center;
+    padding-left: 50px;
+    gap: 10px;
+    font-size: 18px;
+    color:rgb(85, 84, 84) ;
+}
+.footeras{
+    margin-bottom: 30px;
+}
+
+@media (max-width:480px){
+    .header-image{
+        width: 100%;
+    }
+    .header-image img{
+        margin: 0;
+    }
+    .header-content-about{
+        width: 100%;
+    }
+    .about-header{
+        padding: 0px 10px;
+    }
+    .header-content-about h1{
+        font-size: 30px;
+    }
+    .brand-image{
+        margin: 0;
+        flex-wrap: wrap;
+    }
+    .footeras p{
+        padding: 0;
+    }
+}

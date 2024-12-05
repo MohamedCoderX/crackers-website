@@ -1,0 +1,122 @@
+.cracker-display-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+position: relative;
+    flex-wrap: wrap;
+}
+.cracker-display{
+    width: 100%;
+
+animation: fade 1s ease-in;
+
+    margin: auto;
+    background-image: url(../../../public/images/product.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+ position: relative;
+}
+@keyframes fade {
+    from { opacity: 0 }
+    to { opacity: 1 }
+}
+
+.cracker-list-item{
+    width:288px;
+    border-radius: 10px;
+    border: 1px solid #fff;
+    background-color: #fff;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+padding: 5px;
+}
+.cracker-display h2{
+    font-size: 40px;
+    position: relative;
+    text-align: center;
+   padding: 20px 0px;
+    margin: 20px 0px;
+}
+.cracker-list-item img{
+    width: 100%;
+    aspect-ratio:2/2;
+}
+.cracker-review{
+    font-size: 23px;
+    color:black;
+    font-weight: 600;
+   margin:5px 5px!important;
+}
+.cracker-review p{
+    margin:5px 5px!important;
+}
+.cracker-img{
+    position: relative!important;
+}
+.adding input{
+    padding: 5px 0px;
+    text-align: center;
+}
+.adding{
+    color:black;
+    font-size: 20px;
+    font-weight: 600;
+    background-color: #fed703;
+   display: flex;
+   width: 36%;
+    border-radius: 3px;
+    
+}
+.adding h3{
+    width: 30px;
+    font-size: 19px;
+    background-color: #fff;
+    text-align: center;
+    margin: 2px 0px;
+    color: black;
+    position: relative;
+    
+}
+.view-all{
+    text-align: center;
+    margin: 30px 0px;
+}
+.view-all button{
+    background:#fed703;
+    font-size: 20px;
+    border: transparent;
+    font-weight: 500;
+}
+.view-all button:hover{
+    background-color:black;
+    color: white;
+}
+
+.cracker-iem-desc{
+    font-size: 14px;
+    color: gray;
+    text-align: left;
+    margin: 5px 10px;
+}
+.cracker-item-price{
+    text-align: left;
+    font-size: 24px;
+    color: black;
+    font-weight: 700;
+    margin: 5px 5px;
+}
+.cart{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+.cracker-list-item button{
+width: 100%;
+ padding: 6px 20px;
+    
+}
+.cracker-img img{
+  border-radius: 5px;
+}

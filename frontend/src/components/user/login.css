@@ -1,0 +1,122 @@
+.containerer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.form img{
+
+    height: 100px;
+   
+}
+.logo{
+    width: 50%;
+    animation: fadeinLeftt 1s ease-in-out;
+}
+@keyframes fadeinLeftt{
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to { opacity: 1 }
+}
+.logo img{
+    width: 100%;
+}
+.form h1{
+   align-items: center;
+   letter-spacing: 1px;
+   padding-bottom: 50px;
+   margin-top: 10px;
+}
+.form h2{
+    align-items: center;
+    position: relative;
+    right: 25px;
+    margin-top: 30px;
+
+ }
+ .form h3{
+    align-items: center;
+    margin-top: 30px;
+    position: relative;
+    left: 100px;
+ }
+ input[type="Email"],
+input[type="pass"] {
+  padding: 10px 180px 10px 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-size: 14px;
+  align-items: center;
+  margin: 0px 100px 30px 0px;
+  font-size: 16px;
+  
+}
+.form button{
+    background: black;
+    color: white;
+    border-radius: 5px;
+  
+    padding: 10px 170px 10px 180px;
+    cursor: pointer;
+    width: 100%;
+    text-transform: capitalize;
+    font-size: 16px;
+}
+.form button:hover{
+    background-color: #fed703;
+    color: black;
+} 
+.form{
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    width: 35%;
+    animation: faderight 1.5s ease-in-out;
+    flex-direction: column;
+}
+@keyframes faderight{
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to { opacity: 1 }
+}
+@media(max-width:480px){
+    .form img{
+        height: 51px;
+    }
+    .form h1{
+        font-size: 20px;
+        padding-bottom: 10px;
+        text-align: center;
+    }
+    .form{
+        width: 100%;
+    }
+    form{
+        width: 100%;
+    
+    display: flex;
+
+    flex-direction: column;
+ 
+    align-items: center;
+    gap: 10px;
+    }
+    form input{
+        padding: 0px;
+    }
+    .form button{
+        padding: 10px;
+    }
+    input[type="Email"],
+input[type="pass"]{ 
+margin: 0;
+padding: 10px 0px 10px 10px;
+}
+}

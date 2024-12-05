@@ -1,0 +1,49 @@
+.explore-menu-list img{
+    width: 7.5vw;
+    min-width: 80px;
+    cursor: pointer;
+    transition: 0.2s ;
+    border-radius: 50%;
+}
+.explore-menu-list{
+    display: flex;
+   justify-content: center;
+   gap: 20px;
+   align-items: center;
+
+}
+.explore-menu hr{
+    border-top: 1px solid black;
+}
+.explore-menu{
+    text-align: center;
+    width: 95%;
+    margin: auto;
+    animation: fadeinup 2s ease-in-out;
+    animation-timeline: view(infinite);
+}
+@keyframes fadeinup {
+    from {
+        transform: perspective(400px) rotateX(90deg);
+        opacity: 0;
+    }
+    50% { opacity: 1 }
+}
+.explore-menu-list-item{
+    /* width: 8%; */
+    text-align: center;
+}
+.explore-menu p {
+    font-size: 18px;
+    margin: 10px 0px;
+    text-transform: capitalize;
+}
+.explore-menu h2{
+    font-size: 40px;
+    text-transform: capitalize;
+}
+@media (max-width:480px){
+    .explore-menu-list{
+        flex-wrap: wrap;
+    }
+}

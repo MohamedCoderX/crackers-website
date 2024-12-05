@@ -1,0 +1,17 @@
+@media (max-width:480px){
+    .shippii h1{
+        text-align: center;
+    font-size: 27px;
+    margin-top: 12px;
+    text-decoration: underline;
+    }
+    .wrapper form{
+        padding: 10px 4px;
+    }
+    .form-group{
+        width: 100%;
+    }
+    .checkout-progress{
+        display: none!important;
+    }
+}

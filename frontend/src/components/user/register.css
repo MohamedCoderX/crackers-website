@@ -1,0 +1,83 @@
+.register_page {
+    display: flex;
+    justify-content: space-between;
+flex-wrap: wrap;
+}
+
+.regi{
+    display: block;
+    width: 100%;
+    margin: auto;
+  align-content: center;
+  justify-content: center;
+}
+.regi h4{
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.reg_details {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+margin: auto;
+width: 35%;
+animation: fadeinLeftt 1.5s ease-in-out;
+}
+
+@keyframes faderight{
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to { opacity: 1 }
+}
+.regi button:hover{
+    background-color:#fed703;
+}
+.regi button{
+    background: black;
+    color: white;
+    border-radius: 5px;
+    padding: 10px 170px 10px 180px;
+    cursor: pointer;
+    width: 100%;
+    text-transform: capitalize;
+    font-size: 16px;
+}
+.regi input{
+    width: 100%;
+    padding: 10px 20px;
+    margin-bottom:  20px;
+border: 1px solid black;
+    
+}
+
+.reg_image {
+    width: 50%;
+animation: faderight 1s ease-in-out;
+}
+
+.reg_image img {
+    width: 100%;
+}
+@keyframes fadeinLeftt{
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to { opacity: 1 }
+}
+@media (max-width:480px){
+    .reg_image img{
+        display: none;
+    }
+    .reg_details{
+        width: 98%;
+    }
+    .regi button{
+        padding: 10px;
+    }
+}
