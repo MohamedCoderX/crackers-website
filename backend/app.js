@@ -9,8 +9,11 @@ const auth = require('./routes/auth');
 const order = require('./routes/order')
 const path = require('path')
 const cors = require('cors');
-
-
+const corsOptions = {
+  origin:"https://crackers-website.onrender.com",
+  credentials:"true"
+}
+app.use(cors(corsOptions))
 app.use('/uploads', express.static(path.join(__dirname,'uploads') ) )
 
 app.use('/api/v1/',products);
