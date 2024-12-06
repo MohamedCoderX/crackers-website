@@ -17,9 +17,9 @@ const corsOptions = {
   credentials:"true"
 }
 
-
-app.use('/uploads', express.static(path.join(__dirname,'uploads') ) )
 app.use(cors(corsOptions))
+app.use('/uploads', express.static(path.join(__dirname,'uploads') ) )
+
 // Other routes
 app.use("/api/v1", uploadRoute); // Add the upload route under the API path
 // app.use('/uploads', express.static(path.join(__dirname,'uploads') ) )

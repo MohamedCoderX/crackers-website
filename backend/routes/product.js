@@ -5,8 +5,6 @@ const router = express.Router();
 const {isAunthenticatedUser, authorizeRoles} = require('../middleware/authenticate')
 const path = require('path')
 const multer = require('multer')
-const upload = require('../middleware/uploadMiddleware')
-
 
 const upload = multer({storage: multer.diskStorage({
     destination: function(req, file, cb) {

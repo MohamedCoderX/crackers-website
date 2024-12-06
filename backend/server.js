@@ -28,4 +28,4 @@ process.on('uncaughtException',(err)=>{
     })
 })
 
-console.log('Cloudinary API Key:', process.env.CLOUDINARY_API_KEY);
+
