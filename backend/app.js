@@ -16,7 +16,6 @@ const corsOptions = {
   origin:"https://crackers-website.onrender.com",
   credentials:"true"
 }
-
 app.use(cors(corsOptions))
 app.use('/uploads', express.static(path.join(__dirname,'uploads') ) )
 
