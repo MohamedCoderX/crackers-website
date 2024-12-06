@@ -41,10 +41,10 @@ export default function Login() {
       <Fragment>
         <div className="containerer">
           <div className="logo">
-            <img src="../images/logo.jpeg" alt=" logo" />
+            <img src="../images/Logo.jpeg" alt=" logo" />
           </div>
           <div className="form">
-            <img src="../images/logo.png" alt="logo img" />
+            <img src="../images/Logo.png" alt="logo img" />
             <div className="form_one">
               <h1>Sign into your account</h1>
               <form onSubmit={submitHandler}>
