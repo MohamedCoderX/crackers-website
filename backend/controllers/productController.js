@@ -2,7 +2,7 @@ const product = require('../models/productmodel');
 const ErrorHanlder = require('../utils/errorHandler');
 const catchAsyncError = require('../middleware/catchAsyncError');
 const APIFeatures = require('../utils/apiFeatures');
-
+const cloudinary = require("cloudinary").v2;
 
 //get products - {{base_url}}/api/v1/products
 exports.getProducts =catchAsyncError(async(req,res,next)=>{
@@ -34,27 +34,37 @@ res.status(200).json({
 })
 })
 
-//Create product - api/v1/products/new
-exports.newProduct = catchAsyncError(async(req,res,next)=>{    
-let images  = []
-let BASE_URL = process.env.BACKEND_URL;
-   
-    
-if(req.files.length > 0){
-  req.files.forEach(file => {
-    let url = `${BASE_URL}/uploads/product/${file.originalname}`;
-    images.push({image:url})
-});
-}
-req.body.images = images;
-req.body.user = req.user.id;
 
+
+// Create product - api/v1/products/new
+exports.newProduct = catchAsyncError(async (req, res, next) => {
+    let images = [];
+
+    // Ensure files are uploaded via multer and handle Cloudinary uploads
+    if (req.files && req.files.length > 0) {
+        for (const file of req.files) {
+            // Upload each file to Cloudinary
+            const result = await cloudinary.uploader.upload(file.path, {
+                folder: "products", // Specify the folder to store images in Cloudinary
+            });
+
+            // Push the Cloudinary URL into the images array
+            images.push({ image: result.secure_url });
+        }
+    }
+
+    req.body.images = images; // Attach Cloudinary image URLs to the product object
+    req.body.user = req.user.id;
+
+    // Create product and save to DB
     const Product = await product.create(req.body);
-res.status(201).json({
-    sucess:true,
-    Product
-})
+
+    res.status(201).json({
+        success: true,
+        Product,
+    });
 });
+
 
 //get single product -{{base_url}}/api/v1/product/:id
 exports.getSingleProduct = catchAsyncError(async(req,res,next) => {

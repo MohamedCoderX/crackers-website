@@ -44,16 +44,55 @@ dispatch(adminProductsFail(error.response.data.message))
     }
 }
 
-export const createNewProduct = productData => async (dispatch) => {
+// export const createNewProduct = (productData, productImages) => async (dispatch) => {
+//     try {
+//         dispatch(newProductRequest());
+
+//         // Create a FormData object to send data and files
+//         const formData = new FormData();
+
+//         // Append product data (text fields)
+//         for (let key in productData) {
+//             if (productData.hasOwnProperty(key)) {
+//                 formData.append(key, productData[key]);
+//             }
+//         }
+
+//         // Append product images (files)
+//         if (productImages && productImages.length > 0) {
+//             productImages.forEach((image) => {
+//                 formData.append('images', image); // 'images' is the key expected by the backend
+//             });
+//         }
+
+//         // Send POST request to backend with FormData (multipart/form-data)
+//         const { data } = await axios.post('/api/v1/admin/product/new', formData, {
+//             headers: {
+//                 'Content-Type': 'multipart/form-data', // Important for file uploads
+//             },
+//         });
+
+//         // Dispatch success action with the data received from backend
+//         dispatch(newProductSuccess(data));
+//     } catch (error) {
+//         // Handle errors
+//         if (error.response && error.response.data) {
+//             dispatch(newProductFail(error.response.data.message));
+//         } else {
+//             dispatch(newProductFail('Something went wrong.'));
+//         }
+//     }
+// };
+ export const createNewProduct = productData => async (dispatch) => {
     try{
-        dispatch(newProductRequest())
+         dispatch(newProductRequest())
         
-        const {data} = await axios.post(`/api/v1/admin/product/new`,productData);
+         const {data} = await axios.post(`/api/v1/admin/product/new`,productData);
         dispatch(newProductSuccess(data))
-    }catch(error){
-//handle error
-dispatch(newProductFail(error.response.data.message))
-    }
+     }catch(error){
+ //handle error
+ dispatch(newProductFail(error.response.data.message))
+     }
 }
 export const deleteProduct  =  id => async (dispatch) => {
 

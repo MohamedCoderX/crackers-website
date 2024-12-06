@@ -46,40 +46,39 @@ export default function NewProduct() {
     const dispatch = useDispatch();
 
     const onImagesChange = (e) => {
-        const files = Array.from(e.target.files);
+      const files = Array.from(e.target.files);
 
-        files.forEach(file => {
-            
-            const reader = new FileReader();
+      files.forEach(file => {
+          
+          const reader = new FileReader();
 
-            reader.onload = () => {
-                if(reader.readyState == 2 ) {
-                    setImagesPreview(oldArray => [...oldArray, reader.result])
-                    setImages(oldArray => [...oldArray, file])
-                }
-            }
+          reader.onload = () => {
+              if(reader.readyState == 2 ) {
+                  setImagesPreview(oldArray => [...oldArray, reader.result])
+                  setImages(oldArray => [...oldArray, file])
+              }
+          }
 
-            reader.readAsDataURL(file)
+          reader.readAsDataURL(file)
 
 
-        })
+      })
 
-    }
-    
-    const submitHandler = (e) => {
-        e.preventDefault();
-        const formData = new FormData();
-        formData.append('name' , name);
-        formData.append('price' , price);
-        formData.append('stock' , stock);
-        formData.append('description' , description);
-       
-        formData.append('category' , category);
-        images.forEach (image => {
-            formData.append('images', image)
-        })
-        dispatch(createNewProduct(formData))
-    }
+  }
+  const submitHandler = (e) => {
+    e.preventDefault();
+    const formData = new FormData();
+    formData.append('name' , name);
+    formData.append('price' , price);
+    formData.append('stock' , stock);
+    formData.append('description' , description);
+   
+    formData.append('category' , category);
+    images.forEach (image => {
+        formData.append('images', image)
+    })
+    dispatch(createNewProduct(formData))
+}
 
     useEffect(() => {
         if(isProductCreated) {

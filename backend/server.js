@@ -5,7 +5,6 @@ const connectDatabase = require('./config/database');
 
 
 
-
 connectDatabase();
 
 const server = app.listen(process.env.PORT,()=>
@@ -29,3 +28,4 @@ process.on('uncaughtException',(err)=>{
     })
 })
 
+console.log('Cloudinary API Key:', process.env.CLOUDINARY_API_KEY);
