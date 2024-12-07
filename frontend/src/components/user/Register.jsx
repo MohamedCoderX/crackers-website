@@ -72,7 +72,7 @@ const onChange = (e) =>{
         </div>
          
         <div className="reg_image">
-            <img src="../images/register.jpg" alt="img"/>
+            <img src="../images/register.jpg" alt="img" loading='lazy'/>
         </div>
     </div>
     <Footer/>

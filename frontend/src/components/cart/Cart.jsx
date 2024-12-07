@@ -37,7 +37,7 @@ export default function Cart () {
                                     <div className="cart-item">
                                         <div className="row  align-items-center justify-content-center">
                                             <div className="col-4 col-lg-3 p-0">
-                                                <img src={item.image} alt={item.name} height="90" width="115"/>
+                                                <img src={item.image} alt={item.name} height="90" width="115" loading="lazy"/>
                                             </div>
 
                                             <div className="col-5 col-lg-3 col-sm-col-12 p-0 text-center">

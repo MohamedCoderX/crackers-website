@@ -19,7 +19,7 @@ const [menu,setmenu] = useState(false)
   return (
     <div className="navbar">
         <div className="imgnav">
-        <img src="../images/Logo.png" alt="logo" className='Logo'/>
+        <img src="../images/Logo.png" alt="logo" className='Logo' loading='lazy'/>
         <i class="fa-solid fa-bars bar d-lg-none d-md-flex" onClick={()=>{setmenu(!menu)}}></i>
         </div>
 

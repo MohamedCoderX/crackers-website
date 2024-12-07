@@ -10,19 +10,19 @@ const Exploremenu = () => {
    
     <div className="explore-menu-list">
         <div className="explore-menu-list-item">
-            <img src="./images/nightshots.png" alt="nytshot" width="10%" />
+            <img src="./images/nightshots.png" alt="nytshot" width="10%" loading='lazy' />
             <p>Night Shots</p>
         </div>
         <div className="explore-menu-list-item">
-            <img src="./images/dayshots.png" alt="dayshot" />
+            <img src="./images/dayshots.png" alt="dayshot" loading='lazy'/>
             <p>Day Shots</p>
         </div>
         <div className="explore-menu-list-item">
-          <img src="./images/kidscrack.png" alt="crack" />
+          <img src="./images/kidscrack.png" alt="crack" loading='lazy' />
           <p>Kids Crackers</p>
         </div>
         <div className="explore-menu-list-item">
-          <img src="./images/giftbox.png" alt="img" />
+          <img src="./images/giftbox.png" alt="img" loading='lazy'/>
           <p>Gift Boxes</p>
         </div>
     </div>

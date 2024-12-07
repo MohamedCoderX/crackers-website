@@ -7,11 +7,11 @@ const About = () => {
     <div>
         
     <div className="about-head">
-    <img src="../images/logo2.jpg" alt="logo img"/> 
+    <img src="../images/logo2.jpg" alt="logo img" loading='lazy'/> 
     </div>
     <div className="about-header">
         <div className="header-image">
-    <img src="../images/about.jpg" alt="shop img"/>
+    <img src="../images/about.jpg" alt="shop img" loading='lazy'/>
 </div>
 <div className="header-content-about">
     <h1>SM Crackers</h1>
@@ -22,8 +22,8 @@ const About = () => {
      optio soluta laborum, distinctio eligendi eaque.</p>
 
      <div className="header-contentimg">
-     <img src="../images/wholesale.jpg" alt=" wholesale"/>
-     <img src="../images/retail.jpg" alt="Retail"/>
+     <img src="../images/wholesale.jpg" alt=" wholesale" loading='lazy'/>
+     <img src="../images/retail.jpg" alt="Retail" loading='lazy'/>
     </div>
     </div>
     </div>
@@ -31,8 +31,8 @@ const About = () => {
      <div className="brand">
      <h2 className='text-center'>Brands we handle</h2> 
      <div className="brand-image">
-     <img src="../images/brand1.png" alt="Maruti"/>
-     <img src="../images/brand2.png" alt="Moro"/>
+     <img src="../images/brand1.png" alt="Maruti" loading='lazy'/>
+     <img src="../images/brand2.png" alt="Moro" loading='lazy'/>
     </div>
     </div>
     
