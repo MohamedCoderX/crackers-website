@@ -39,7 +39,7 @@ res.status(200).json({
 //Create product - api/v1/products/new
 exports.newProduct = catchAsyncError(async(req,res,next)=>{    
     let images  = []
-    let BASE_URL = `${req.protocol}://${req.get('host')}`;
+    let BASE_URL = `https://${req.get('host')}`;
     if(process.env.NODE_ENV === "Production"){
         BASE_URL = `https://${req.get('host')}`
     }
