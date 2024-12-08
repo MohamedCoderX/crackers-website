@@ -41,7 +41,7 @@ exports.newProduct = catchAsyncError(async(req,res,next)=>{
     let images  = []
     let BASE_URL = process.env.BACKEND_URL;
     if(process.env.NODE_ENV === "Production"){
-        BASE_URL = `${req.protocol}://${req.get('host')}`
+        BASE_URL = `https://${req.headers.host}${req.url}`
     }
     if(req.files.length > 0){
       req.files.forEach(file => {
